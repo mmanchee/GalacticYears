@@ -12,7 +12,7 @@ describe('addUserData', () => {
 
   test('Should correctly add the userData object to ages object', () => {
     const ages = new Ages();
-    this.addUserData({name: "Mike", dob: "Sept 21 1977", expAge: 81});
+    ages.addUserData({name: "Mike", dob: "Sept 21 1977", expAge: 81});
     expect(ages.user).toEqual({name: "Mike", dob: "Sept 21 1977", expAge: 81});
   })
 })
