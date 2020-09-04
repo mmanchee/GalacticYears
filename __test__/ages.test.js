@@ -61,3 +61,12 @@ describe('marsYear', () => {
     expect(ages.mars).toEqual([22, 575]);
   })
 })
+describe('jupiterYear', () => {
+
+  test('Should correctly add the jupiterYear to ages object', () => {
+    const ages = new Ages();
+    ages.daysAlive = 15689;
+    ages.jupiterYear();
+    expect(ages.jupiter).toEqual([3, 2690]);
+  })
+})
