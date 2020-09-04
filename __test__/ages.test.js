@@ -49,6 +49,6 @@ describe('earthYear', () => {
     const ages = new Ages();
     ages.daysAlive = 15689;
     ages.earthYear();
-    expect(ages.venus).toEqual([42, 348]);
+    expect(ages.earth).toEqual([42, 348]);
   })
 })

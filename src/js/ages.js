@@ -41,4 +41,13 @@ export class Ages {
 
     this.venus = [years, days];
   }
+  earthYear() {
+    let lifeDays = this.daysAlive;
+    let planetDays = 365.25;
+
+    let years = Math.floor(lifeDays / planetDays);
+    let days = Math.floor(lifeDays % planetDays);
+
+    this.earth = [years, days];
+  }
 }
