@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title>TITLE</title>
+  <title>Galactic Year Converter</title>
 </head>
 <body>
   <div class="container">
-    
+    <div class="jumbotron">
+      <h1>Galactic Year Converter</h1>
+    </div>
+    <form id="user-input">
+      <div class="form-group">
+        <input class="form-control col-5" id="name" type="text" placeholder="Enter Name">
+      </div>
+      <div class="form-group">
+        <label for="dob" class="form-check-label">Date of Birth:</label>
+        <input type="date" class="form-control col-3" id="dob">
+      </div>
+      <p class="ml-3">Find out your life expectancy age by clicking one of the following two links, then enter below.<br>
+        For blueprintincome.com <a href="https://www.blueprintincome.com/tools/life-expectancy-calculator-how-long-will-i-live/">Here</a><br>
+        For media.nmfn.com <a href="https://media.nmfn.com/tnetwork/lifespan/">Here</a>
+      </p>
+      <div class="form-group">
+        <input class="form-control col-2" id="expectancy" type="number" placeholder="Expectancy">
+      </div>
+      <button class="btn btn-info" type="submit">Submit</button> 
+    </form>
+    <div id="result">
+
+    </div>
   </div>
 </body>
 </html>

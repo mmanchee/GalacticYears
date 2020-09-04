@@ -1,13 +1,15 @@
 export class Ages {
   constructor() {
-    this.user = "",
-    this.daysAlive = 0,
-    this.daysLeft = 0
+    this.user = {},     // {name: , dob: , expAge: }
+    this.days = {},     // {alive: , total: , left: }
+    this.date = {},     // {today: , exp: }
+    this.planets = {mercury: 88, venus: 25, earth: 365.25, mars: 687, jupiter: 4333, saturn: 10759}
   }
 
   addUserData(user) {
     this.user = user;
     this.addDaysAlive();
+    this.expectancy();
   }
 
   addDaysAlive() {
@@ -15,35 +17,36 @@ export class Ages {
     let month = String(date.getMonth() + 1).padStart(2, '0');
     let year = date.getFullYear();
     let day = String(date.getDate()).padStart(2, '0');
-    this.today = month + "/" + day + "/" + year;
-    let tDate = new Date(this.today);
+    this.date.today = month + "/" + day + "/" + year;
+    
+    let tDate = new Date(this.date.today);
     let ddob = new Date(this.user.dob);
 
     let timeDiff = tDate.getTime() - ddob.getTime();
     let dayDiff = timeDiff / (1000 * 3600 * 24);
 
-    this.daysAlive = dayDiff;
+    this.days.alive = dayDiff;
   }
   
   expectancy() {
     let d = this.user.dob.slice(6, 10);
     let y = this.user.dob.slice(0, 6);
     let year = String(parseInt(d) + this.user.expAge);
-    this.expDate = y + year;
+    this.date.exp = y + year;
 
-    let eDate = new Date(this.expDate);
+    let eDate = new Date(this.date.exp);
     let ddob = new Date(this.user.dob);
 
     let timeDiff = eDate.getTime() - ddob.getTime();
     let dayDiff = timeDiff / (1000 * 3600 * 24);
 
-    this.expInDays = dayDiff;
-    this.daysLeft =  this.expInDays - this.daysAlive;
+    this.days.total = dayDiff;
+    this.days.left = this.days.total - this.days.alive;
   }
-
+  
   mercuryYear() {
-    let lifeDays = this.daysAlive;
-    let planetDays = 88;
+    let lifeDays = this.days.alive;
+    let planetDays = ages.planets.mercury;
 
     let years = Math.floor(lifeDays / planetDays);
     let days = Math.floor(lifeDays % planetDays);
@@ -51,8 +54,8 @@ export class Ages {
     this.mercury = [years, days];
   }
   venusYear() {
-    let lifeDays = this.daysAlive;
-    let planetDays = 25;
+    let lifeDays = this.days.alive;
+    let planetDays = ages.planets.venus;
 
     let years = Math.floor(lifeDays / planetDays);
     let days = Math.floor(lifeDays % planetDays);
@@ -60,8 +63,8 @@ export class Ages {
     this.venus = [years, days];
   }
   earthYear() {
-    let lifeDays = this.daysAlive;
-    let planetDays = 365.25;
+    let lifeDays = this.days.alive;
+    let planetDays = ages.planets.earth;
 
     let years = Math.floor(lifeDays / planetDays);
     let days = Math.floor(lifeDays % planetDays);
@@ -69,8 +72,8 @@ export class Ages {
     this.earth = [years, days];
   }
   marsYear() {
-    let lifeDays = this.daysAlive;
-    let planetDays = 687;
+    let lifeDays = this.days.alive;
+    let planetDays = ages.planets.mars;
 
     let years = Math.floor(lifeDays / planetDays);
     let days = Math.floor(lifeDays % planetDays);
@@ -78,8 +81,8 @@ export class Ages {
     this.mars = [years, days];
   }
   jupiterYear() {
-    let lifeDays = this.daysAlive;
-    let planetDays = 4333;
+    let lifeDays = this.days.alive;
+    let planetDays = ages.planets.jupiter;
 
     let years = Math.floor(lifeDays / planetDays);
     let days = Math.floor(lifeDays % planetDays);
@@ -87,8 +90,8 @@ export class Ages {
     this.jupiter = [years, days];
   }
   saturnYear() {
-    let lifeDays = this.daysAlive;
-    let planetDays = 10759;
+    let lifeDays = this.days.alive;
+    let planetDays = ages.planets.saturn;
 
     let years = Math.floor(lifeDays / planetDays);
     let days = Math.floor(lifeDays % planetDays);
@@ -96,3 +99,5 @@ export class Ages {
     this.saturn = [years, days];
   }
 }
+
+export let ages = new Ages();
