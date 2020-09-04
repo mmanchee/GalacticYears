@@ -1,5 +1,5 @@
 import { UserData } from './../src/js/userData.js';
-import { TestScheduler } from 'jest';
+import { UserData } from 'jest';
 
 describe('UserData', () => {
 
