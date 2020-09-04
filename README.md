@@ -28,7 +28,9 @@ the return is displayed for user for each planet
 |  7. Mars Function, use days to calculate mars years (687 days) | age in days | mars years |
 |  8. Jupiter Function, use days to calculate Jupiter years (4,333 days) | age in days | jupiter years |
 |  9. Saturn Function, use days to calculate Saturn years (10,759 days) | age in days | saturn years |
-|  10. Report Function, use ages object to report to JQuery | ages object | jquery ready HTML |
+|  10. Expectancy Function, calculate the days total left and days left from today | expAge | total days left and days from today |
+|  11. PlanetExp Function, use each planet year to determine life expectancy on that planet | age in days | planet expectancy years |
+|  12. Report Function, use ages object to report to JQuery | ages object | jquery ready HTML |
 
 ## Setup/Installation Requirements
 

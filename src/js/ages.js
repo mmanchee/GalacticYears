@@ -1,7 +1,8 @@
 export class Ages {
   constructor() {
     this.user = "",
-    this.daysAlive = 0
+    this.daysAlive = 0,
+    this.daysLeft = 0
   }
 
   addUserData(user) {
@@ -23,6 +24,7 @@ export class Ages {
 
     this.daysAlive = dayDiff;
   }
+  
   mercuryYear() {
     let lifeDays = this.daysAlive;
     let planetDays = 88;
