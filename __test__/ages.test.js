@@ -34,3 +34,12 @@ describe('mercuryYear', () => {
     expect(ages.mercury).toEqual([178, 25]);
   })
 })
+describe('venusYear', () => {
+
+  test('Should correctly add the venusYear to ages object', () => {
+    const ages = new Ages();
+    ages.daysAlive = 15689;
+    ages.venusYear();
+    expect(ages.venus).toEqual([627, 14]);
+  })
+})
