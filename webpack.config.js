@@ -15,7 +15,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: '',               // <== Title
+      title: 'GalacticYearConverter',
       template: './src/index.html',
       inject: 'body'
     })

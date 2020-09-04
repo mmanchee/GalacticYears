@@ -1,7 +1,7 @@
 {
-  "name": "***************** Title ***********",              
+  "name": "galactic-year-converter",
   "version": "1.0.0",
-  "description": " ******************** Description **************",      
+  "description": "This project is designed to calculate the current age of the user over multiple planets in this solar system.",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode development",
