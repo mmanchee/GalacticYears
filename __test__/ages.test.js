@@ -83,7 +83,7 @@ describe('expectancy', () => {
 
   test('Should correctly add the daysLeft and expInDays to ages object', () => {
     const ages = new Ages();
-    ages.daysLeft = 15689;
+    ages.daysAlive = 15689;
     ages.user = {name: "Mike", dob: "09/21/1977", expAge: 81};
     ages.expectancy();
     expect(ages.daysLeft).toEqual(13896);

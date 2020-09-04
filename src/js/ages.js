@@ -15,16 +15,32 @@ export class Ages {
     let month = String(date.getMonth() + 1).padStart(2, '0');
     let year = date.getFullYear();
     let day = String(date.getDate()).padStart(2, '0');
-    let tDate = month + "/" + day + "/" + year;
-    let today = new Date(tDate);
+    this.today = month + "/" + day + "/" + year;
+    let tDate = new Date(this.today);
     let ddob = new Date(this.user.dob);
 
-    let timeDiff = today.getTime() - ddob.getTime();
+    let timeDiff = tDate.getTime() - ddob.getTime();
     let dayDiff = timeDiff / (1000 * 3600 * 24);
 
     this.daysAlive = dayDiff;
   }
   
+  expectancy() {
+    let d = this.user.dob.slice(6, 10);
+    let y = this.user.dob.slice(0, 6);
+    let year = String(parseInt(d) + this.user.expAge);
+    this.expDate = y + year;
+
+    let eDate = new Date(this.expDate);
+    let ddob = new Date(this.user.dob);
+
+    let timeDiff = eDate.getTime() - ddob.getTime();
+    let dayDiff = timeDiff / (1000 * 3600 * 24);
+
+    this.expInDays = dayDiff;
+    this.daysLeft =  this.expInDays - this.daysAlive;
+  }
+
   mercuryYear() {
     let lifeDays = this.daysAlive;
     let planetDays = 88;
