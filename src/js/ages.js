@@ -59,4 +59,13 @@ export class Ages {
 
     this.mars = [years, days];
   }
+  jupiterYear() {
+    let lifeDays = this.daysAlive;
+    let planetDays = 4333;
+
+    let years = Math.floor(lifeDays / planetDays);
+    let days = Math.floor(lifeDays % planetDays);
+
+    this.jupiter = [years, days];
+  }
 }
