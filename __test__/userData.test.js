@@ -1,5 +1,4 @@
 import { UserData } from './../src/js/userData.js';
-import { UserData } from 'jest';
 
 describe('UserData', () => {
 
