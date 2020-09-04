@@ -29,6 +29,7 @@ describe('mercuryYear', () => {
 
   test('Should correctly add the mercuryYear to ages object', () => {
     const ages = new Ages();
+    ages.daysAlive = 15689;
     ages.mercuryYear();
     expect(ages.mercury).toEqual([178, 25]);
   })

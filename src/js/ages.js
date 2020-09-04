@@ -23,4 +23,13 @@ export class Ages {
 
     this.daysAlive = dayDiff;
   }
+  mercuryYear() {
+    let lifeDays = this.daysAlive;
+    let planetDays = 88;
+
+    let years = Math.floor(lifeDays / planetDays);
+    let days = Math.floor(lifeDays % planetDays);
+
+    this.mercury = [years, days];
+  }
 }
