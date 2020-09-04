@@ -32,4 +32,13 @@ export class Ages {
 
     this.mercury = [years, days];
   }
+  venusYear() {
+    let lifeDays = this.daysAlive;
+    let planetDays = 25;
+
+    let years = Math.floor(lifeDays / planetDays);
+    let days = Math.floor(lifeDays % planetDays);
+
+    this.venus = [years, days];
+  }
 }
