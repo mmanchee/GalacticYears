@@ -16,3 +16,11 @@ describe('addUserData', () => {
     expect(ages.user).toEqual({name: "Mike", dob: "Sept 21 1977", expAge: 81});
   })
 })
+describe('addDaysAlive', () => {
+
+  test('Should correctly calculate the days alive and add to ages object', () => {
+    const ages = new Ages();
+    ages.addDaysAlive({dob: "Sept 21 1977"});
+    expect(ages.daysAlive).toEqual(15689); // test will fail every other day except Sept 4th 2020, must add days from that date too pass
+  })
+})
