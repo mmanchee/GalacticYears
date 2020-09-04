@@ -70,3 +70,12 @@ describe('jupiterYear', () => {
     expect(ages.jupiter).toEqual([3, 2690]);
   })
 })
+describe('saturnYear', () => {
+
+  test('Should correctly add the saturnYear to ages object', () => {
+    const ages = new Ages();
+    ages.daysAlive = 15689;
+    ages.saturnYear();
+    expect(ages.saturn).toEqual([1, 4930]);
+  })
+})
