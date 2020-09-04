@@ -50,4 +50,13 @@ export class Ages {
 
     this.earth = [years, days];
   }
+  marsYear() {
+    let lifeDays = this.daysAlive;
+    let planetDays = 687;
+
+    let years = Math.floor(lifeDays / planetDays);
+    let days = Math.floor(lifeDays % planetDays);
+
+    this.mars = [years, days];
+  }
 }

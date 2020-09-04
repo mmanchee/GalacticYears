@@ -22,10 +22,13 @@ the return is displayed for user for each planet
 |  1. Create a constructor to take in user info | user input | user object |
 |  2. Create a years class for calculations | user object | solar class |
 |  3. Age Function, calculate age in days | birth date | age in days |
-|  4. Mercury Function, use days to calculate mercury years | age in days | mercury years |
-|  1. ... | ... | ... |
-|  1. ... | ... | ... |
-|  1. ... | ... | ... |
+|  4. Mercury Function, use days to calculate mercury years (88 days) | age in days | mercury years |
+|  5. Venus Function, use days to calculate venus years (25 days) | age in days | venus years |
+|  6. Earth Function, use days to calculate earth years (365.25 days) | age in days | earth years |
+|  7. Mars Function, use days to calculate mars years (687 days) | age in days | mars years |
+|  8. Jupiter Function, use days to calculate Jupiter years (4,333 days) | age in days | jupiter years |
+|  9. Saturn Function, use days to calculate Saturn years (10,759 days) | age in days | saturn years |
+|  10. Report Function, use ages object to report to JQuery | ages object | jquery ready HTML |
 
 ## Setup/Installation Requirements
 

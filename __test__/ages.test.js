@@ -58,6 +58,6 @@ describe('marsYear', () => {
     const ages = new Ages();
     ages.daysAlive = 15689;
     ages.marsYear();
-    expect(ages.mars).toEqual([42, 348]);
+    expect(ages.mars).toEqual([22, 575]);
   })
 })
