@@ -43,7 +43,19 @@ export class Ages {
     this.days.total = dayDiff;
     this.days.left = this.days.total - this.days.alive;
   }
-  
+  // Refactored code for below 
+  planetYear() {
+    let textToHTML = "";
+    for (let key in this.planets) {
+      textToHTML += `<p> ${key} has ${this.planets[key]} days in one cycle. <br> For you; <br>`;
+      for (let type in this.days) {
+        let years = Math.floor(this.days[type] / this.planets[key]);
+        let days = Math.floor(this.days[type] % this.planets[key]);
+        textToHTML += `${type}: ${years} years and ${days} days<br>`;
+      }
+    }
+    return textToHTML;
+  }
   mercuryYear() {
     let lifeDays = this.days.alive;
     let planetDays = ages.planets.mercury;
