@@ -12,6 +12,13 @@ export class Ages {
     this.expectancy();
   }
 
+  adjDate(date) {
+    let mm = date.slice(5, 7);
+    let dd = date.slice(8, 10);
+    let yyyy = date.slice(0, 4);
+    return `${mm}/${dd}/${yyyy}`;
+  }
+
   addDaysAlive() {
     let date = new Date();
     let month = String(date.getMonth() + 1).padStart(2, '0');
@@ -51,11 +58,13 @@ export class Ages {
       for (let type in this.days) {
         let years = Math.floor(this.days[type] / this.planets[key]);
         let days = Math.floor(this.days[type] % this.planets[key]);
-        textToHTML += `${type}: ${years} years and ${days} days<br>`;
+        let under = `${type}: ${years} years and ${days} days<br>`;
+        textToHTML += under;
       }
     }
     return textToHTML;
   }
+
   mercuryYear() {
     let lifeDays = this.days.alive;
     let planetDays = ages.planets.mercury;

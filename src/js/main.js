@@ -12,10 +12,7 @@ $(document).ready(function() {
     const date = $("input#dob").val();
     const expAge = parseInt($("input#expectancy").val());
 
-    let mm = date.slice(5, 7);
-    let dd = date.slice(8, 10);
-    let yyyy = date.slice(0, 4);
-    let dob = `${mm}/${dd}/${yyyy}`
+    let dob = ages.adjDate(date);
     
     const user = new UserData(name, dob, expAge);
     ages.addUserData(user);
