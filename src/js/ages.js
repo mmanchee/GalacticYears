@@ -59,7 +59,8 @@ export class Ages {
         let years = Math.floor(this.days[type] / this.planets[key]);
         let days = Math.floor(this.days[type] % this.planets[key]);
         let under = `${type}: ${years} years and ${days} days<br>`;
-        textToHTML += under;
+        let over = `Congratulations, you are ${years * -1} and ${days * -1} days over your expectancy!`
+        years < 0 ? years = textToHTML += over : textToHTML += under;
       }
     }
     return textToHTML;
