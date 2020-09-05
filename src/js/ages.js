@@ -3,7 +3,7 @@ export class Ages {
     this.user = {},     // {name: , dob: , expAge: }
     this.days = {},     // {alive: , total: , left: }
     this.date = {},     // {today: , exp: }
-    this.planets = {mercury: 88, venus: 25, earth: 365.25, mars: 687, jupiter: 4333, saturn: 10759}
+    this.planets = {Mercury: 88, Venus: 25, Earth: 365.25, Mars: 687, Jupiter: 4333, Saturn: 10759}
   }
 
   addUserData(user) {
@@ -68,7 +68,7 @@ export class Ages {
 
   mercuryYear() {
     let lifeDays = this.days.alive;
-    let planetDays = ages.planets.mercury;
+    let planetDays = ages.planets.Mercury;
 
     let years = Math.floor(lifeDays / planetDays);
     let days = Math.floor(lifeDays % planetDays);
@@ -77,7 +77,7 @@ export class Ages {
   }
   venusYear() {
     let lifeDays = this.days.alive;
-    let planetDays = ages.planets.venus;
+    let planetDays = ages.planets.Venus;
 
     let years = Math.floor(lifeDays / planetDays);
     let days = Math.floor(lifeDays % planetDays);
@@ -86,7 +86,7 @@ export class Ages {
   }
   earthYear() {
     let lifeDays = this.days.alive;
-    let planetDays = ages.planets.earth;
+    let planetDays = ages.planets.Earth;
 
     let years = Math.floor(lifeDays / planetDays);
     let days = Math.floor(lifeDays % planetDays);
@@ -95,7 +95,7 @@ export class Ages {
   }
   marsYear() {
     let lifeDays = this.days.alive;
-    let planetDays = ages.planets.mars;
+    let planetDays = ages.planets.Mars;
 
     let years = Math.floor(lifeDays / planetDays);
     let days = Math.floor(lifeDays % planetDays);
@@ -104,7 +104,7 @@ export class Ages {
   }
   jupiterYear() {
     let lifeDays = this.days.alive;
-    let planetDays = ages.planets.jupiter;
+    let planetDays = ages.planets.Jupiter;
 
     let years = Math.floor(lifeDays / planetDays);
     let days = Math.floor(lifeDays % planetDays);
@@ -113,7 +113,7 @@ export class Ages {
   }
   saturnYear() {
     let lifeDays = this.days.alive;
-    let planetDays = ages.planets.saturn;
+    let planetDays = ages.planets.Saturn;
 
     let years = Math.floor(lifeDays / planetDays);
     let days = Math.floor(lifeDays % planetDays);

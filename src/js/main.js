@@ -18,6 +18,6 @@ $(document).ready(function() {
     ages.addUserData(user);
     let result = ages.planetYear();
 
-    $("#result").text(result);
+    $("#result").html(result);
   })
 })
