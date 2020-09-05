@@ -112,4 +112,12 @@ describe('planetYear', () => {
     let text = ages.planetYear();
     expect(text).toEqual(result2);
   })
+  describe('adjDate', () => {
+
+    test('Should correctly display the date in MM/DD/YYYY', () => {
+      const ages = new Ages();
+      let date = ages.adjDate("1977-09-21");
+      expect(date).toEqual("09/21/1977");
+    })
+  })
 })
