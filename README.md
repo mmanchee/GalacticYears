@@ -38,11 +38,18 @@ the return is displayed for user for each planet
 * Download option
   * Download files from GitHub repository by click Code and Download Zip
   * Extract files into a single directory 
-  * Open index.html in the browser of choice
-  * Have fun with Plaza Pizza Parlor!
+  * Run GitBASH in directory
+    * Type "npm install" - to install Node Package Manager and additional files
+    * Type "npm run start" - to open compiled browser and view project
+  * Have fun with Galactic Years!
 
 * Cloning options
   * For cloning please use the following GitHub [tutorial](https://docs.github.com/en/enterprise/2.16/user/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+  * Place files into a single directory 
+  * Run GitBASH in directory
+    * Type "npm install" - to install Node Package Manager and additional files
+    * Type "npm run start" - to open compiled browser and view project
+  * Have fun with Galactic Years!
 
 ## Known Bugs
 

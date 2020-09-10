@@ -7,7 +7,7 @@ describe('Ages', () => {
     expect(ages.user).toEqual({});
     expect(ages.days).toEqual({});
     expect(ages.date).toEqual({});
-    expect(ages.planets).toEqual({mercury: 88, venus: 25, earth: 365.25, mars: 687, jupiter: 4333, saturn: 10759});
+    expect(ages.planets).toEqual({Mercury: 88, Venus: 25, Earth: 365.25, Mars: 687, Jupiter: 4333, Saturn: 10759});
   })
 })
 describe('addUserData', () => {
@@ -24,7 +24,7 @@ describe('addDaysAlive', () => {
     const ages = new Ages();
     ages.user = {name: "Mike", dob: "09/21/1977", expAge: 81};
     ages.addDaysAlive();
-    expect(ages.days.alive).toEqual(15689); // test will fail every other day except Sept 4th 2020, must add days from that date too pass
+    expect(ages.days.alive).toEqual(15695); // test will fail every other day except Sept 4th 2020, must add days from that date too pass
   })
 })
 describe('mercuryYear', () => {
