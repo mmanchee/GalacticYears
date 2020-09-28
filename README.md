@@ -2,6 +2,8 @@
 
 #### _Week 5 Solo Project for Epicodus, September 4th, 2020_
 
+#### Published at: [Galactic Years](https://mmanchee.github.io/GalacticYears/)
+
 #### By _**Mike Manchee**_
 
 ## Description
